@@ -27,13 +27,13 @@
 
 
 <p>Phone Number:
-<input type = "text" name = "Phone Number" size = "30" value = "" />
+<input type = "text" name = "phone_number" size = "30" value = "" />
 
 </p>
 
 
 <p>Employee ID:
-<input type = "text" name = "Employee ID" size = "30" value = "" />
+<input type = "text" name = "employoee_id" size = "30" value = "" />
 </p>
 
 
