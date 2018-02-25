@@ -6,8 +6,9 @@
 
 </head>
 
-<body>
+<body bgcolor="#343234">
 
+<font size="5" color="#CCE6A4">
 <form action = "http://localhost:8080/resourceadded.php" method = "post">
 
 
@@ -27,7 +28,7 @@
 
 
 <p>
-<input type ="submit" name="submit" value = "Send" />
+<input type ="submit" name="submit1" value = "Send" />
 
 </p>
 
@@ -53,7 +54,7 @@
 
 
 <p>
-<input type ="submit" name="submit" value = "Send" />
+<input type ="submit" name="submit2" value = "Send" />
 
 </p>
 
@@ -79,13 +80,13 @@
 
 
 <p>
-<input type ="submit" name="submit" value = "Send" />
+<input type ="submit" name="submit3" value = "Send" />
 
 </p>
 
 
 </form>
-
+</font>
 </body>
 
 </html>
