@@ -6,8 +6,9 @@
 
 </head>
 
-<body>
+<body bgcolor="#343234">
 
+<font size="5" color="#CCE6A4">
 <?php
 
 
@@ -186,6 +187,7 @@ if(empty($_POST['first_name'])) {
 
 </form>
 
+</font>
 </body>
 
 </html>
