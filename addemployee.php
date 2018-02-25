@@ -6,8 +6,9 @@
 
 </head>
 
-<body>
+<body bgcolor="#343234">
 
+<font size="5" color="#CCE6A4">
 <form action = "http://localhost:8080/employeeadded.php" method = "post">
 
 
@@ -33,7 +34,7 @@
 
 
 <p>Employee ID:
-<input type = "text" name = "employoee_id" size = "30" value = "" />
+<input type = "text" name = "employee_id" size = "30" value = "" />
 </p>
 
 
@@ -44,7 +45,7 @@
 
 
 </form>
-
+</font>
 </body>
 
 </html>
