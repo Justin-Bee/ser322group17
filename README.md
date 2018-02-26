@@ -1,1 +1,3 @@
 # ser322group17
+First make sure that mysql workbench is open with a server created that is named localhost. Set the user name to group17 and the password to ser322.  Next open apache on xampp. Depending on what port it is running on there might need to be changes to the php files. Once this is done first run the script " buildDB.php". After that run the script "buildtables.php". After this run the scripts "insertEmployeeData.php", "insertLaptopData.php", "insertProjectorData.php", insertConferenceRoomData.php" and insertReservationData.php".
+After this one can launch index.html. From their you can navigate through the multiple options to either enter data into the different tables and run queries on the database.
