@@ -150,18 +150,16 @@ else {
 
     employee_id INT UNSIGNED NOT NULL,
     resource_id INT UNSIGNED NOT NULL,
+    
     month VARCHAR(13),
-
-    day INT UNSIGNED,
- 
-    year INT UNSIGNED,
- 
+    day INT UNSIGNED, 
+    year INT UNSIGNED, 
     start_time VARCHAR(45),
-
     chunks VARCHAR(45),
 
-    FOREIGN KEY (employee_id) REFERENCES employee (employee_id),
     FOREIGN KEY (resource_id) REFERENCES resource (resource_id),
+    FOREIGN KEY (employee_id) REFERENCES employee (employee_id),
+    
     PRIMARY KEY (employee_id, resource_id)
   )";
 
