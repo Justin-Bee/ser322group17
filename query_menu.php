@@ -1,7 +1,3 @@
-<html>
-
-<title> Query Menu </title>
-<body>
 
 <head>
 	<body bgcolor="#343234">
@@ -10,7 +6,7 @@
 				What would you like to query?
 			</font>
 		</hi><br><br><br>
-
+​
 		<table>
 			<tr>
 				<td>
@@ -39,7 +35,7 @@
 						<font size="5" color="#CCE6A4"> Show Conference Rooms </font>
 					</a>
 				</td>
-			</tr>			
+			</tr>
 			<tr>
 				<td>
 					<a href="http://localhost:8080/show_projectors.php">
@@ -61,8 +57,15 @@
 					</a>
 				</td>
 			</tr>
-
-
+			<tr>
+				<td>
+					<a href="http://localhost:8080/query_reservations.php">
+						<font size="5" color="#CCE6A4"> Check Resource Availability </font>
+					</a>
+				</td>
+			</tr>
+​
+​
 			<br><br><br>
 			<tr>
 				<td>
@@ -71,19 +74,19 @@
 					</a>
 				</td>
 			</tr>
-
+​
 	</body>
 </head>
-
-
-
-
-
-
-
-
-
-
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
 </body>
-
+​
 </html>

@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "group17";
-$password = "ser322";
+$password = "";
 $dbname = "group17DB";
 
 //Create Connection to DB. DB must be specified
@@ -15,7 +15,7 @@ if ($conn -> connect_error) {
 
 //Create Employee Table (FOR SQL)
 $sql = "CREATE TABLE employee (
-  employee_id INT UNSIGNED NOT NULL PRIMARY KEY,
+  employee_id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   phone_number VARCHAR(30)
@@ -29,16 +29,14 @@ if ($conn->query ($sql) === TRUE ) {
     echo "Error Creating Employee table: " . $conn->error . "</br>";
   }
 
-
-
-
-
   //Create resource TABLE
   $sql = "CREATE TABLE resource (
-    resource_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    resource_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    device_id INT UNSIGNED,
+    type ENUM('conference_room', 'projector', 'laptop') NOT NULL
   )";
 
-  //CHecking Creation of resource table
+  //Checking Creation of resource table
   if ($conn->query ($sql) === TRUE) {
     echo "Table resource created successfully</br>";
   }else {
@@ -94,11 +92,9 @@ if ($conn->query ($sql) === TRUE ) {
 
   //Create Conference Room TABLE
   $sql = "CREATE TABLE conference_room (
-      resource_id INT UNSIGNED NOT NULL,
-      room_number INT UNSIGNED NOT NULL,
+      room_number INT UNSIGNED AUTO_INCREMENT NOT NULL,
       capacity INT UNSIGNED,
-      FOREIGN KEY (resource_id) REFERENCES resource (resource_id),
-      PRIMARY KEY (resource_id, room_number)
+      PRIMARY KEY (room_number)
   )";
 
 
@@ -112,11 +108,9 @@ if ($conn->query ($sql) === TRUE ) {
 
   //Create laptop TABLE
   $sql = "CREATE TABLE laptop (
-    resource_id INT UNSIGNED NOT NULL,
-    device_id INT UNSIGNED NOT NULL,
+    device_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     manufacturer VARCHAR(30),
-    FOREIGN KEY (resource_id) REFERENCES resource(resource_id),
-    PRIMARY KEY (resource_id, device_id)
+    PRIMARY KEY (device_id)
   )";
 
   //CHecking Creation of laptop TABLE
@@ -129,11 +123,9 @@ if ($conn->query ($sql) === TRUE ) {
 
   //Create projector table
   $sql = "CREATE TABLE projector (
-    resource_id INT UNSIGNED NOT NULL,
-    device_id INT UNSIGNED NOT NULL,
+    device_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     lamp_hours INT UNSIGNED,
-    FOREIGN KEY (resource_id) REFERENCES resource(resource_id),
-    PRIMARY KEY (resource_id, device_id)
+    PRIMARY KEY (device_id)
   )";
 
   //Check Creation of projector table
@@ -162,4 +154,12 @@ if ($conn->query ($sql) === TRUE ) {
     }
 
   $conn->close();
+
+include 'insertEmployeeData.php';
+include 'insertLaptopData.php';
+include 'insertProjectorData.php';
+include 'insertRoomData.php';
+include 'insertReservationData.php';
+//include 'index.html';
+
 ?>

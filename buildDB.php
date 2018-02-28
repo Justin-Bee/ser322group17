@@ -4,7 +4,7 @@ $servername = "localhost";
 
 $username = "group17";
 
-$password = "ser322";
+$password = "";
 
 
 //Create connection

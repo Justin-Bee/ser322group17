@@ -82,7 +82,10 @@ if(empty($_POST['first_name'])) {
 
         //this is a PATH to my connect file. I had to make it exact to make it work
 
-        require_once('C:\Users\jbeea\Desktop\ASU\SER 322\Group 17 Final Project\mysqli_connect.php');
+        //require_once('C:\Users\jbeea\Desktop\ASU\SER 322\Group 17 Final Project\mysqli_connect.php');
+          $dbc = mysqli_connect('localhost', 'group17', '', 'group17db');
+  if (mysqli_connect_error())
+      echo mysqli_connect_error();
 
 
        $query = "INSERT INTO employee (first_name, last_name, phone_number, employee_id) VALUES (?, ?, ?, ?)";
